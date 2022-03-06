@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="sv.edu.udb.primerejercicio" >
+    package="sv.edu.udb.dsm.guia3.logindsm">
 
     <application
         android:allowBackup="true"
@@ -8,16 +8,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PrimerEjercicio" >
+        android:theme="@style/Theme.LoginDSM">
         <activity
-            android:name=".ResultadosEjercicio1"
-            android:exported="true" />
+            android:name=".resultadoVentas"
+            android:exported="false" />
         <activity
-            android:name=".Ejercicio2"
-            android:exported="true" />
+            android:name=".ventas"
+            android:exported="false" />
+        <activity
+            android:name=".cuadratica"
+            android:exported="false" />
+        <activity
+            android:name=".menuExercices"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

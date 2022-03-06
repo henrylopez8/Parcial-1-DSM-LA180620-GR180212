@@ -1,13 +1,16 @@
-package sv.edu.udb.primerejercicio;
+package sv.edu.udb.dsm.guia3.logindsm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class cuadratica extends AppCompatActivity {
 
     private EditText numbera;
     private EditText numberb;
@@ -15,17 +18,18 @@ public class MainActivity extends AppCompatActivity {
     private TextView resultado;
     private TextView tx1;
     private TextView tx2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_cuadratica);
         numbera = (EditText) findViewById(R.id.Numbera);
         numberb=(EditText) findViewById(R.id.Numberb);
         numberc=(EditText) findViewById(R.id.Numberc);
         tx1=(TextView) findViewById(R.id.resultado);
         tx2=(TextView) findViewById(R.id.resultado2);
-
     }
+
 
     public void btncalcular(View v){
 
@@ -48,4 +52,15 @@ public class MainActivity extends AppCompatActivity {
             tx2.setText(String.valueOf(x2));
         }
     }
+
+    public void cerrarSesion(View v)
+    {
+        SharedPreferences preferences =
+                getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
+        preferences.edit().remove("Credenciales").commit();
+
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+
 }
