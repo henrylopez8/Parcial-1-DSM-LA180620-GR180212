@@ -2,69 +2,109 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imageFoto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1C243E"
     tools:context=".resultadoVentas">
 
-    <TextView
-        android:id="@+id/mostrartporcentaje"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="58dp"
-        app:layout_constraintBottom_toTopOf="@+id/mostrartotalcomision"
-        app:layout_constraintEnd_toStartOf="@+id/mostrartotalcomision"
-        app:layout_constraintStart_toStartOf="@+id/mostrarnombre"
-        app:layout_constraintTop_toBottomOf="@+id/mostrartmes" />
-
-    <TextView
-        android:id="@+id/mostrartmes"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="68dp"
-        app:layout_constraintBottom_toTopOf="@+id/mostrartporcentaje"
-        app:layout_constraintEnd_toEndOf="@+id/mostrartporcentaje"
-        app:layout_constraintStart_toStartOf="@+id/mostrartporcentaje"
-        app:layout_constraintTop_toBottomOf="@+id/mostrarcodigo" />
-
-    <TextView
-        android:id="@+id/mostrarcodigo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toTopOf="@+id/mostrartmes"
-        app:layout_constraintEnd_toEndOf="@+id/mostrartmes"
-        app:layout_constraintStart_toStartOf="@+id/mostrarnombre"
-        app:layout_constraintTop_toBottomOf="@+id/mostrarnombre" />
-
-    <TextView
-        android:id="@+id/textView5"
+    <Button
+        android:id="@+id/btnClose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="141dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginBottom="62dp"
-        android:text="Resultados"
-        app:layout_constraintBottom_toTopOf="@+id/mostrarnombre"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/mostrarnombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="57dp"
-        app:layout_constraintBottom_toTopOf="@+id/mostrarcodigo"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/mostrartotalcomision"
-        android:layout_width="4dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="170dp"
-        android:layout_marginBottom="276dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#B40606"
+        android:onClick="cerrarSesion"
+        android:text="Cerra Sesion"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mostrartporcentaje" />
+        app:layout_constraintTop_toBottomOf="@+id/txtMes"
+        app:layout_constraintVertical_bias="0.966" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="128dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/txtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="name"
+        android:textColor="#EFE3E3"
+        app:layout_constraintBottom_toTopOf="@+id/txtCodigo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="codigo"
+        android:textColor="#EDE1E1"
+        app:layout_constraintBottom_toTopOf="@+id/txtVentas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtVentas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="ventas"
+        android:textColor="#E1D3D3"
+        app:layout_constraintBottom_toTopOf="@+id/txtMes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="280dp"
+        android:text="mes"
+        android:textColor="#F3E6E6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtComision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$$$"
+        android:textColor="#3D9543"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMes" />
+
+    <TextView
+        android:id="@+id/txtComision2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comision:"
+        android:textColor="#D6C8C8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMes" />
 </androidx.constraintlayout.widget.ConstraintLayout>

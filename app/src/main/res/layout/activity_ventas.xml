@@ -88,4 +88,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/btnImagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#D8B9B9"
+        android:backgroundTint="#3F51B5"
+        android:onClick="onCLick"
+        android:text="Cargar Imagen"
+        app:layout_constraintBottom_toTopOf="@+id/btncalcularsalarios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtmesventas"
+        app:layout_constraintVertical_bias="0.441" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
